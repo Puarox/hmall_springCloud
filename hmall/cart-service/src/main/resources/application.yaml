@@ -7,6 +7,8 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.190.129:8848
+        grpc:
+          server-addr: 192.168.190.129:9848
   profiles:
     active: dev
   datasource:
@@ -14,7 +16,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: ${hm.db.pw}
-
+feign:
+  okhttp:
+    enabled: true
   main:
     allow-circular-references: true
 mybatis-plus:
