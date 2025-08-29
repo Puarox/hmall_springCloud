@@ -10,15 +10,12 @@ import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
 import com.hmall.cart.mapper.CartMapper;
 import com.hmall.cart.service.ICartService;
-import com.hmall.cart.service.IItemService;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.common.utils.UserContext;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.Collection;
 import java.util.List;
@@ -39,10 +36,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
-    private final IItemService itemService;
-    private final RestTemplate restTemplate;
-
-    private final DiscoveryClient discoveryClient;
     private final ItemClient itemClient;
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
