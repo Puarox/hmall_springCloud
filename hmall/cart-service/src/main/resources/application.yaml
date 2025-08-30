@@ -9,6 +9,10 @@ spring:
         server-addr: 192.168.190.129:8848
         grpc:
           server-addr: 192.168.190.129:9848
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true
   profiles:
     active: dev
   datasource:

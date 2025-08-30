@@ -13,6 +13,10 @@
     <dependencies>
         <!--common-->
         <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.heima</groupId>
             <artifactId>hm-common</artifactId>
             <version>1.0.0</version>
